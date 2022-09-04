@@ -1,0 +1,90 @@
+// SUB GRID OF SOFT-SKILLS, LANGUAGES AND RESOLTIONS IN THE PROFILE SECTION
+
+.gridarea {
+  @supports (display: grid) {
+    display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, minmax(8rem, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &--languages {
+    @supports (display: grid) {
+      display: grid;
+      //grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, minmax(6rem, 1fr));
+      gap: 1.1rem;
+      align-items: start;
+
+      @include respond(tab-port) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &--resolutions {
+    @supports (display: grid) {
+      display: grid;
+      //grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(1, minmax(6rem, 1fr));
+      gap: 1.1rem;
+      align-items: start;
+
+      @include respond(tab-port) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.grid {
+  margin: 1rem;
+
+  @supports (display: grid) {
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1.5rem;
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    grid-row: 1 / span 2;
+
+    @include respond(tab-port) {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    @include respond(phone) {
+      width: 4rem;
+      height: 4rem;
+      margin-top: -15%;
+    }
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 1;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+  }
+}

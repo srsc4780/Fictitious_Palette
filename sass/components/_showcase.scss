@@ -1,0 +1,91 @@
+.digital-showcase {
+  list-style: none;
+
+  &__item {
+    display: block;
+    float: left;
+    width: 25%;
+  }
+
+  &__tab {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+  }
+
+  &__image {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    filter: blur(0.5px) brightness(80%);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+
+    &:hover {
+      opacity: 1;
+      -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+      transform: scale(1.03);
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-primary-light;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+    padding: 0.8rem 0.8rem;
+    display: inline;
+    width: 100%;
+    background-color: rgba($color-primary-dark, 0.4);
+  }
+
+  &__item:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    background-color: rgba($color-primary-dark, 0.4);
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    &__item {
+      display: block;
+      float: left;
+      width: 25%;
+    }
+
+    &__caption {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      opacity: 1;
+      font-size: 0.8rem;
+    }
+
+    &__image {
+      opacity: 1;
+      width: 100%;
+      height: auto;
+      transform: scale(1);
+
+      :not(:hover) {
+      }
+    }
+
+    &__item:not(:hover) &__caption {
+      transition: none;
+    }
+  }
+}

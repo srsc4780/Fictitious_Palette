@@ -1,0 +1,224 @@
+.section-services {
+  padding: 20rem 2rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-tertiary-light, 0.8),
+      rgba($color-secondary-light, 0.8)
+    ),
+    url("../../img/Second_Background.jpg");
+  background-size: cover;
+  //background-attachment: fixed;
+  transform: skewY(-7deg);
+  margin-top: -40rem;
+  margin-bottom: 20rem;
+  height: 100vh;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+    height: 127vh;
+  }
+
+  @include respond(phone) {
+    padding: 10rem 0;
+    height: 165vh;
+  }
+
+  @include respond(small-phone) {
+    padding: 10rem 0;
+    height: 200vh;
+  }
+}
+
+.section-process {
+  height: 70vw;
+  color: $color-primary;
+  padding: 10rem 2rem;
+  margin-bottom: 5rem;
+
+  @include respond(tab-land) {
+    margin-bottom: 40rem;
+    transform: skewY(-7deg);
+
+    & > * {
+      transform: skewY(7deg);
+    }
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-tertiary-light, 0.8),
+      rgba($color-secondary-light, 0.8)
+    );
+    background-attachment: fixed;
+    height: 300rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.section-arts {
+  background-color: rgba($color-primary, 0.2);
+  height: 55vw;
+  margin-bottom: 30rem;
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-special, 0.2),
+      rgba($color-special, 0.8)
+    );
+    background-attachment: fixed;
+    -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
+    margin-bottom: 10rem;
+    height: 90vw;
+  }
+
+  @include respond(small-phone) {
+    -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+    padding: 10rem 0;
+    height: 150vw;
+  }
+}
+
+.section-logos {
+  background-color: $color-secondary-dark;
+  padding: 10rem 3rem;
+  padding-bottom: 20rem;
+  margin-bottom: 20rem;
+
+  @include respond(tab-port) {
+    background-attachment: fixed;
+    margin-bottom: 10rem;
+    height: 100vw;
+    padding: 0;
+  }
+
+  @include respond(phone) {
+    background-attachment: fixed;
+    margin-bottom: 10rem;
+    height: 200vw;
+    padding: 0;
+  }
+
+  @include respond(small-phone) {
+    padding: 10rem 0;
+    height: 250vw;
+  }
+}
+
+.section-ux {
+  &__user-experience {
+    padding: 10rem 10rem;
+    grid-template-rows: 120vh min-content 80vw repeat(3, min-content);
+    grid-template-columns:
+      [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6rem, 1fr)
+      [full-end];
+
+    @include respond(tab-land) {
+      padding: 3rem 3rem;
+      grid-template-rows: 6rem 100vh min-content 60vw repeat(3, min-content);
+      grid-template-columns:
+        [full-start] minmax(6rem, 1fr) [center-start] repeat(
+          8,
+          [col-start] minmax(min-content, 14rem) [col-end]
+        )
+        [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: 800px) {
+      padding: 1rem 1rem;
+      grid-template-rows: 6rem calc(100vh - 6rem);
+    }
+  }
+}
+
+.section-animations {
+  padding: 10rem 2rem;
+  margin-bottom: 20rem;
+
+  @include respond(tab-port) {
+    padding: 20rem 0;
+  }
+}
+
+.section-featured {
+  padding: 10rem 0;
+  position: relative;
+  margin-bottom: 40rem;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+    margin-bottom: 5rem;
+  }
+
+  &__header {
+    @include respond(tab-port) {
+      position: absolute;
+      top: -5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-secondary-dark, 0.9) 0%,
+      rgba($color-secondary-dark, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../../img/Modal/Cover.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-primary-light, 0.2);
+  position: relative;
+  width: 100%;
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-secondary-dark, 0.9) 0%,
+        rgba($color-secondary-dark, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../../img/Modal/Cover.png);
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-secondary-dark, 0.9) 0%,
+        rgba($color-secondary-dark, 0.9) 100%
+      ),
+      url(../../img/Modal/Cover.png);
+  }
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(13rem);
+}

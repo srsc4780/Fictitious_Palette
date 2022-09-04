@@ -1,0 +1,124 @@
+.tabs {
+  max-width: 136rem;
+  margin: 2rem auto 0 auto;
+}
+
+.tabs__tab-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0 5rem;
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+.tabs__tab {
+  margin-right: 2.5rem;
+  transform: translateY(-50%);
+
+  @include respond(phone) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.tabs__tab--1 {
+  background-color: rgba($color-special-2, 0.95);
+  margin-left: 1%;
+
+  @include respond(phone) {
+    margin-left: 0;
+    margin-top: 5rem;
+  }
+
+  .tabs__tab--1:hover {
+    background-color: rgba($color-special-2, 0.3);
+  }
+}
+
+.tabs__tab--2 {
+  background-color: rgba($color-secondary-light, 0.95);
+
+  .tabs__tab--2:hover {
+    background-color: rgba($color-secondary-light, 0.3);
+  }
+}
+
+.tabs__tab--3 {
+  background-color: rgba($color-alternate-dark, 0.95);
+  margin: 0;
+
+  .tabs__tab--3:hover {
+    background-color: rgba($color-alternate-dark, 0.3);
+  }
+}
+
+.tabs__tab--active {
+  transform: translateY(-26%);
+}
+
+.tabs__container {
+  display: none;
+}
+
+.tabs__container--active {
+  display: block;
+  max-width: 144rem;
+  padding: 0;
+  margin: 0;
+  height: 320rem;
+}
+
+/*
+.tabs {
+  border: 1px solid $color-primary-light;
+  display: flex;
+}
+
+.tabs__sidebar {
+  width: 125px;
+  flex-shrink: 0;
+  background: $color-secondary-light;
+}
+
+.tabs__button {
+  display: block;
+  padding: 10px;
+  background: $color-tertiary-light;
+  border: none;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.tabs__button:active {
+  background: $color-primary-dark;
+}
+
+.tabs__button:not(:last-of-type) {
+  border-bottom: $color-secondary-dark;
+}
+
+.tabs__button--active {
+  font-weight: bold;
+  border-right: 2px solid $color-special;
+  background: $color-primary-dark;
+}
+
+.tabs__content {
+  padding: 15px;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.tabs__content--active {
+  display: block;
+}
+
+tabs__content > :first-child {
+  margin-top: 0;
+}
+*/

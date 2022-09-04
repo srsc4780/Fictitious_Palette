@@ -1,0 +1,44 @@
+.services-box {
+  background-color: rgba($color-primary-light, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, 0.15);
+  transition: transform 0.3s;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  color: rgba($color-secondary-dark, 0.8);
+
+  @include respond(tab-port) {
+    padding: 2rem;
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    height: 0.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+}
+
+#services__logo--animation {
+  height: 9.4rem;
+}
+
+#services__logo--ux {
+  height: 9.4rem;
+}
+
+#services__logo--brand {
+  height: 9.4rem;
+}

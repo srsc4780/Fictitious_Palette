@@ -1,0 +1,138 @@
+.footer {
+  height: 95vh;
+  background-image: linear-gradient(
+      to bottom,
+      transparent,
+      rgba($color-tertiary-dark, 0.2)
+    ),
+    url("../../img/Footer/Footer_Background.png");
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: $color-alternate-light-1;
+  background-size: cover;
+  //background-repeat: no-repeat;
+  position: relative;
+  background-position: bottom;
+
+  @include respond(tab-land) {
+    height: 75vh;
+  }
+
+  @include respond(tab-port) {
+    height: 36vh;
+  }
+
+  @include respond(small-phone) {
+    height: 32vh;
+  }
+
+  &__icons {
+    display: flex;
+    list-style: none;
+    bottom: 10.5rem;
+    position: absolute;
+    left: 5%;
+
+    @include respond(phone) {
+      bottom: 7rem;
+    }
+
+    @include respond(small-phone) {
+      bottom: 5rem;
+    }
+  }
+
+  &__items {
+    margin-right: 2rem;
+
+    @include respond(tab-port) {
+      width: 2.5rem;
+    }
+  }
+
+  &__credits {
+    bottom: 10.2rem;
+    right: 0;
+    position: absolute;
+    font-size: 160%;
+    border-bottom: 4px solid $color-alternate-dark-3;
+
+    @include respond(tab-land) {
+      font-size: 120%;
+    }
+
+    @include respond(tab-port) {
+      font-size: 125%;
+    }
+
+    @include respond(phone) {
+      font-size: 130%;
+      bottom: 2rem;
+    }
+
+    @include respond(small-phone) {
+      font-size: 80%;
+    }
+  }
+
+  &__images {
+    width: 120%;
+    height: auto;
+    opacity: 0.7;
+    transition: all 0.1s;
+
+    &:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+  }
+
+  &__developer {
+    padding: 0 3rem;
+    color: $color-primary-dark;
+  }
+
+  &__link {
+    padding: 0 2rem;
+    color: $color-primary-dark;
+  }
+
+  &__copyright {
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    color: $color-primary-dark;
+
+    @include respond(tab-port) {
+      font-size: 110%;
+    }
+
+    @include respond(phone) {
+      font-size: 80%;
+    }
+
+    @include respond(small-phone) {
+      font-size: 60%;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-alternate-dark-2;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 0.5rem 0.5rem;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary-dark;
+      box-shadow: 0 1rem 2rem rgba($color-primary-dark, 0.4);
+      padding: 0.5rem 0.5rem;
+    }
+  }
+}

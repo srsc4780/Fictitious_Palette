@@ -1,0 +1,35 @@
+// COLORS
+$color-primary: #020202;
+$color-primary-light: #fff;
+$color-primary-dark: #000;
+
+$color-secondary-light: #f3f3f3;
+$color-secondary-dark: #333333;
+
+$color-tertiary-light: #e1e1e1;
+$color-tertiary-dark: #1b1b1b;
+
+$color-alternate-light-1: #af9191;
+$color-alternate-light-2: #78271a;
+
+$color-alternate-dark: #54483a;
+$color-alternate-dark-2: #3f0f12;
+$color-alternate-dark-3: #200002;
+
+$color-special: #101d2c;
+$color-special-2: #c69963;
+$color-special-3: #b28451;
+
+//$color-white: #fff;
+//$color-black: #000;
+
+// FONT
+$default-font-size: 1.6rem;
+$default-font: "Lato", sans-serif;
+$special-font: "Edo";
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;

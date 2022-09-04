@@ -1,0 +1,19 @@
+.blog {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-tertiary-light, 0.8),
+      rgba($color-secondary-light, 0.8)
+    ),
+    url("../../img/Blog_Background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+}
+
+.picture-credit {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
